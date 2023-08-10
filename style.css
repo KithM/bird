@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.logo img {
+    width: 128px;
+    height: auto; /* this ensures the image retains its aspect ratio */
+}
+
+.bird-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 10px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.bird-grid li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.bird-grid a {
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    color: #333;
+}
+
+.bird-grid a:hover {
+    background-color: #e0e0e0;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.prompt {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#bird-title {
+    text-transform: capitalize;
+}
+
+.bird-info {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.bird-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.bird-details img {
+    max-width: 40%; /* adjust this value if you need */
+    height: 600px;
+    margin-left: 20px; /* spacing between text and image */
+    border-radius: 8px;
+}
+
+.back-button {
+    display: block;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.2s;
+}
+
+.back-button:hover {
+    background-color: #e0e0e0;
+}
