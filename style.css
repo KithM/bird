@@ -17,11 +17,24 @@ body {
     padding: 0;
 }
 
+/* .bird-grid li {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+} */
+
 .bird-grid li {
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
     text-align: center;
+    aspect-ratio: 1; /* Ensures width:height ratio is 1:1 */
+}
+.bird-grid li::before {
+    content: "";
+    display: block;
+    padding-top: 100%; /* Creates a square based on width */
 }
 
 .bird-grid a {
