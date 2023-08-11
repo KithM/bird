@@ -35,7 +35,7 @@
         function loadBirdDescription(birdName) {
             var xhr = new XMLHttpRequest();
             
-            let birdNameURL = `Data/${birdName.replace(' ', '_')}.html`;
+            let birdNameURL = `${birdName.replace(' ', '_')}.html`;
             xhr.open('GET', 'Data/' + birdNameURL + '.html', true);
 
             xhr.onload = function() {
