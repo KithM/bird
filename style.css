@@ -73,7 +73,7 @@ a {
 
 .bird-details img {
     max-width: 40%; /* adjust this value if you need */
-    height: 600px;
+/*     height: 600px; */
     margin-left: 20px; /* spacing between text and image */
     border-radius: 8px;
 }
