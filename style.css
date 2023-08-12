@@ -91,9 +91,10 @@ a {
 }
 
 .bird-details img {
-    max-width: 40%; /* adjust this value if you need */
-/*     height: 600px; */
-    margin-left: 20px; /* spacing between text and image */
+    float: right;  /* This will make the image float to the right and text will wrap around it */
+    max-width: 40%; 
+    height: auto;  /* Adjusted to keep the aspect ratio of the image */
+    margin: 0 0 20px 20px;  /* Spacing between text and image. Top, Right, Bottom, Left */
     border-radius: 8px;
 }
 
