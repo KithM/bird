@@ -17,20 +17,11 @@ body {
     padding: 0;
 }
 
-/* .bird-grid li {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
-} */
-
 .bird-grid li {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-align: center;
     aspect-ratio: 1; /* Ensures width:height ratio is 1:1 */
+    display: flex; /* This will make sure the anchor tag stretches across the li */
 }
+
 .bird-grid li::before {
     content: "";
     display: block;
@@ -38,10 +29,15 @@ body {
 }
 
 .bird-grid a {
-    display: block;
+    display: block; /* Fills the entire li */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
     padding: 20px;
     text-decoration: none;
     color: #333;
+    transition: background-color 0.2s; /* Transition effect for smoother color change */
 }
 
 .bird-grid a:hover {
