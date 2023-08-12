@@ -9,12 +9,31 @@ body {
     height: auto; /* this ensures the image retains its aspect ratio */
 }
 
+/* Mobile Devices (Small Screens) */
 .bird-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 (3 old) columns */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
     gap: 10px;
     list-style-type: none;
     padding: 0;
+}
+/* Tablet (Medium Screens) */
+@media (min-width: 600px) {
+    .bird-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
+}
+/* Desktop (Large Screens) */
+@media (min-width: 1024px) {
+    .bird-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 columns for large screens */
+    }
+}
+/* Large Desktop (Extra Large Screens) */
+@media (min-width: 1440px) {
+    .bird-grid {
+        grid-template-columns: repeat(6, 1fr); /* 6 columns for very wide screens */
+    }
 }
 
 .bird-grid li {
