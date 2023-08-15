@@ -11,7 +11,32 @@
 <link rel="stylesheet" href="style.css">
 
 <body>
+    <a href="index.html" class="back-button">Back to Home</a>
+
     <div class="bird-info" id="bird-content"><!-- Dynamic bird content will be populated here -->
+        <!-- Tab buttons -->
+        <div class="tab-buttons">
+            <button class="tablink" onclick="openTab('feeding', this)">Feeding</button>
+            <button class="tablink" onclick="openTab('care', this)">Care</button>
+            <button class="tablink" onclick="openTab('origin', this)">Origin</button>
+            <!-- ... add more tab buttons as needed -->
+        </div>
+        
+        <!-- Tab content divs -->
+        <div id="feeding" class="tabcontent">
+            <!-- Feeding info will go here, or can be loaded dynamically like you did with bird-description -->
+        </div>
+        
+        <div id="care" class="tabcontent">
+            <!-- Care info will go here -->
+        </div>
+        
+        <div id="origin" class="tabcontent">
+            <!-- Origin info will go here -->
+        </div>
+        
+        <!-- ... add more tabcontent divs as needed -->
+
         <div class="bird-details">
             <p id="bird-description">Loading...</p>
             <img id="bird-image" alt="Bird image" src="">
@@ -52,6 +77,26 @@
 
             xhr.send();
         }
+
+        // Tab functionality
+        function openTab(tabId, element) {
+            // Hide all tabcontents
+            var tabcontents = document.querySelectorAll('.tabcontent');
+            tabcontents.forEach(tc => tc.style.display = 'none');
+            
+            // Remove "active" class from all tablinks
+            var tablinks = document.querySelectorAll('.tablink');
+            tablinks.forEach(tl => tl.classList.remove('active'));
+
+            // Display the clicked tab's content and set it as active
+            document.getElementById(tabId).style.display = 'block';
+            element.classList.add('active');
+        }
+
+        // Add an event listener to automatically click the first tab
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelector('.tablink').click();
+        });
     </script>
 </body>
 
