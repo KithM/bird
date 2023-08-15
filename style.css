@@ -47,6 +47,16 @@ body {
     padding-top: 100%; /* Creates a square based on width */
 }
 
+.bird-grid img {
+    width: 100%; /* Sets the image width to 100% of its container */
+    height: auto; /* Ensures the image retains its aspect ratio */
+    max-height: 100%; /* Ensures the image doesn't exceed the container height */
+    object-fit: cover; /* Resizes the image to cover the container, cropping it if necessary */
+    object-position: center; /* Centers the image within the container */
+    display: block; /* Makes the image a block-level element */
+    margin: 0 auto 10px; /* Centers the image horizontally and adds spacing between the image and text */
+}
+
 .bird-grid a {
     display: block; /* Fills the entire li */
     background-color: #fff;
