@@ -43,6 +43,12 @@ body {
     background-position: center;
     position: relative;
     border-radius: 8px;
+
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    color: #ffffff;  /* Change text color to white */
+    font-weight: bold;  /* Make text bold */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);  /* Add a subtle shadow to the text */
 }
 
 .bird-grid li::before {
@@ -58,9 +64,6 @@ body {
     transform: translate(-50%, -50%);
     z-index: 1;
     width: 100%;  /* Add this line */
-    text-align: center;  /* Add this line */
-    font-weight: bold;  /* Make text bold */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 .bird-grid img {
     width: 100%; /* Sets the image width to 100% of its container */
