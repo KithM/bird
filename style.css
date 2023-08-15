@@ -49,6 +49,7 @@ body {
     color: #ffffff;  /* Change text color to white */
     font-weight: bold;  /* Make text bold */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);  /* Add a subtle shadow to the text */
+    font-size: 24px;
 }
 
 .bird-grid li::before {
