@@ -20,17 +20,6 @@
         What would you like to learn about?
     </div>
 
-<!--     <ul class="bird-grid">
-        <li><a href="bird.html?bird=english budgie">English Budgie</a></li>
-        <li><a href="bird.html?bird=american budgie">American Budgie</a></li>
-        <li><a href="bird.html?bird=cockatiel">Cockatiel</a></li>
-        <li><a href="bird.html?bird=green cheek conure">Green Check Conure</a></li>
-        <li><a href="bird.html?bird=kakariki">Kakariki</a></li>
-        <li><a href="bird.html?bird=quaker">Quaker</a></li>
-        <li><a href="bird.html?bird=ringneck">Ringneck</a></li>        
-        <li><a href="bird.html?bird=lovebird">Lovebird</a></li>
-        <li><a href="bird.html?bird=amazon">Amazon</a></li>
-    </ul> -->
     <ul class="bird-grid">
         <a href="bird.html?bird=english budgie">
             <li data-image="Bird Types/english_budgie.jpg">English Budgie</li>
@@ -61,6 +50,17 @@
         </a>
     </ul>
 
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var birdItems = document.querySelectorAll('.bird-grid li');
+
+        birdItems.forEach(function(item) {
+            var imageUrl = item.getAttribute('data-image');
+            item.style.backgroundImage = 'url(' + imageUrl + ')';
+        });
+    });
+    </script>
+    
 </body>
 
 </html>
