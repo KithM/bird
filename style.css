@@ -39,12 +39,17 @@ body {
 .bird-grid li {
     aspect-ratio: 1; /* Ensures width:height ratio is 1:1 */
     display: flex; /* This will make sure the anchor tag stretches across the li */
+    background-size: cover; /* This makes sure the image covers the entire box */
+    background-position: center; /* This centers the image in the box */
 }
 
 .bird-grid li::before {
     content: "";
     display: block;
     padding-top: 100%; /* Creates a square based on width */
+}
+.bird-grid li[data-image] {
+    background-image: url(attr(data-image)); /* This sets the background image based on the data-image attribute */
 }
 
 .bird-grid img {
