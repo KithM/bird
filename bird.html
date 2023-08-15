@@ -14,6 +14,11 @@
     <a href="index.html" class="back-button">Back to Home</a>
 
     <div class="bird-info" id="bird-content"><!-- Dynamic bird content will be populated here -->
+        <!-- Overview section -->
+        <div class="bird-overview" id="bird-overview">
+            <p>Loading overview...</p>
+        </div>
+        
         <!-- Tab buttons -->
         <div class="tab-buttons">
             <button class="tablink" onclick="openTab('feeding', this)">Feeding</button>
@@ -58,24 +63,68 @@
         });
 
         function loadBirdDescription(birdName) {
-            var xhr = new XMLHttpRequest();
+            var xhrOverview = new XMLHttpRequest();
+            var xhrFeeding = new XMLHttpRequest();
+            var xhrCare = new XMLHttpRequest();
+            var xhrOrigin = new XMLHttpRequest();
             
             let birdNameURL = `${birdName.replace(' ', '_')}`;
-            xhr.open('GET', 'Data/' + birdNameURL + '.html', true);
 
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    document.getElementById('bird-description').innerHTML = xhr.responseText;
+            // Load Overview Content
+            xhrOverview.open('GET', 'Data/' + birdNameURL + '.html', true); //_overview.html
+            xhrOverview.onload = function() {
+                if (xhrOverview.status === 200) {
+                    document.getElementById('bird-overview').innerHTML = xhrOverview.responseText;
                 } else {
-                    document.getElementById('bird-description').innerHTML = "Information not available.";
+                    document.getElementById('bird-overview').innerHTML = "Overview information not available.";
                 }
             };
-
-            xhr.onerror = function() {
-                document.getElementById('bird-description').innerHTML = "Error loading information.";
+            xhrOverview.onerror = function() {
+                document.getElementById('bird-overview').innerHTML = "Error loading overview information.";
             };
+            xhrOverview.send();
 
-            xhr.send();
+            // Load Feeding Content
+            xhrFeeding.open('GET', 'Data/' + birdNameURL + '_feeding.html', true);
+            xhrFeeding.onload = function() {
+                if (xhrFeeding.status === 200) {
+                    document.getElementById('feeding').innerHTML = xhrFeeding.responseText;
+                } else {
+                    document.getElementById('feeding').innerHTML = "Feeding information not available.";
+                }
+            };
+            xhrFeeding.onerror = function() {
+                document.getElementById('feeding').innerHTML = "Error loading feeding information.";
+            };
+            xhrFeeding.send();
+
+            // Load Care Content
+            xhrCare.open('GET', 'Data/' + birdNameURL + '_care.html', true);
+            xhrCare.onload = function() {
+                if (xhrCare.status === 200) {
+                    document.getElementById('care').innerHTML = xhrCare.responseText;
+                } else {
+                    document.getElementById('care').innerHTML = "Care information not available.";
+                }
+            };
+            xhrCare.onerror = function() {
+                document.getElementById('care').innerHTML = "Error loading care information.";
+            };
+            xhrCare.send();
+
+            // Load Origin Content
+            xhrOrigin.open('GET', 'Data/' + birdNameURL + '_origin.html', true);
+            xhrOrigin.onload = function() {
+                if (xhrOrigin.status === 200) {
+                    document.getElementById('origin').innerHTML = xhrOrigin.responseText;
+                } else {
+                    document.getElementById('origin').innerHTML = "Origin information not available.";
+                }
+            };
+            xhrOrigin.onerror = function() {
+                document.getElementById('origin').innerHTML = "Error loading origin information.";
+            };
+            xhrOrigin.send();
         }
 
         // Tab functionality
