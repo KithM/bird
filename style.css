@@ -79,7 +79,7 @@ body {
 .bird-grid a {
     display: block; /* Fills the entire li */
     background-color: #fff;
-    border: 1px solid #ccc;
+/*     border: 1px solid #ccc; */
     border-radius: 8px;
     text-align: center;
 /*     padding: 20px; */
