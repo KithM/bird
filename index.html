@@ -57,7 +57,7 @@
         birdItems.forEach(function(item) {
             var imageUrl = item.getAttribute('data-image');
             console.log("Setting image:", imageUrl);  // Add this line
-            item.style.backgroundImage = 'url(' + imageUrl + ')';
+            item.style.backgroundImage = 'url(' + encodeURI(imageUrl) + ')';
         });
     });
     </script>
