@@ -117,19 +117,6 @@ a {
     border-radius: 8px;
 }
 
-/* .bird-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-} */
-
-/* .bird-details img {
-    float: right;  
-    max-width: 40%; 
-    height: auto;  
-    margin: 0 0 20px 20px;  
-    border-radius: 8px;
-} */
 .bird-details img {
     float: right; /* This makes the image float to the right of its container */
     width: auto; /* Reset to auto for natural width of the image */
@@ -146,7 +133,6 @@ a {
     width: 200px;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
     background-color: #fff;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -154,7 +140,12 @@ a {
     color: #333;
     transition: background-color 0.2s;
 }
-
+.back-button:nth-of-type(1) {
+    margin-bottom: 10px;
+}
+.back-button:nth-of-type(2) {
+    margin-top: 10px;
+}
 .back-button:hover {
     background-color: #e0e0e0;
 }
